@@ -1,0 +1,7 @@
+def main():
+    values = [x ** 2 for x in range(10)]
+    print(values)
+
+
+if __name__ == '__main__':
+    main()
