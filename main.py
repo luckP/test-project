@@ -1,4 +1,5 @@
 from utils import test_function
+from test2 import test2
 
 
 def main():
@@ -13,6 +14,8 @@ def main():
 
     # TEST NEW UTILS FILE
     print(test_function())
+
+    test2()
 
 
 if __name__ == '__main__':
