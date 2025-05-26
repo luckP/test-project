@@ -14,6 +14,8 @@ def main():
     # TEST NEW UTILS FILE
     print(test_function())
 
+    print("bla bla bla")
+
 
 if __name__ == '__main__':
     main()
