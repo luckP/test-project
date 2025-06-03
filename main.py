@@ -3,11 +3,14 @@
 # Change from clone2
 # Change from clone1
 
+# test change 1asdlfalsdkjf
+
 import asyncio
 import aiohttp
 from utils import test_function
 from test2 import test2
 import requests
+from UserClass import User
 
 
 def main():
@@ -27,13 +30,17 @@ def main():
 
     print("bla bla bla")
 
-    print(asyncio.run(fetchAsync()))
+    # print(asyncio.run(fetchAsync()))
 
     # function3()
 
-    function2()
+    # function2()
 
-    fucntion1()
+    # fucntion1()
+
+    users = create_new_data(10)
+    for u in users:
+        print(u)
 
 
 def fucntion1():
@@ -41,6 +48,10 @@ def fucntion1():
 
     for x in my_list:
         print(x)
+
+
+def new_function():
+    pass
 
 
 def function2():
@@ -61,6 +72,11 @@ async def fetchAsync():
     async with aiohttp.ClientSession() as session:
         async with session.get("https://en.wikipedia.org/wiki/Black_hole") as response:
             return await response.text()
+
+
+def create_new_data(x):
+    users = [User(f'name-{i}', i+20) for i in range(x)]
+    return users
 
 
 if __name__ == '__main__':
