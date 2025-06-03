@@ -73,7 +73,8 @@ async def fetchAsync():
 
 
 def create_new_data(x):
-    users = [User(f'name-{i}', i+20) for i in range(x)]
+    users = [User(name=f'name-{i}', age=i+20, is_active=True)
+             for i in range(x)]
     return users
 
 
