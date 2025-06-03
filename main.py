@@ -3,11 +3,13 @@
 # Change from clone2
 # Change from clone1
 
+from UserClass import User
 import asyncio
 import aiohttp
 from utils import test_function
 from test2 import test2
 import requests
+from functools import reduce
 
 
 def main():
@@ -27,13 +29,18 @@ def main():
 
     print("bla bla bla")
 
-    print(asyncio.run(fetchAsync()))
+    # print(asyncio.run(fetchAsync()))
 
     # function3()
 
     function2()
 
     fucntion1()
+
+    users = create_10_user()
+
+    for i, u in enumerate(users):
+        print(i, u)
 
 
 def fucntion1():
@@ -49,6 +56,12 @@ def function2():
     print('asdf3')
     print('asdf4')
     print('asdf5')
+
+
+def create_10_user():
+    users = [User(name=f'new_user_{i}', age=i+30,
+                  is_active=True) for i in range(10)]
+    return users
 
 
 def function3() -> None:
